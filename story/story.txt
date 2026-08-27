@@ -1,0 +1,296 @@
+You are a young adventurer in a medieval fantasy world, tasked with breaking a mysterious curse that has fallen over the Kingdom of Elaria.  
+The curse is slowly turning its people into stone, and the King has promised great rewards for whoever can find a way to lift it.  
+Along the way, you will encounter a diverse cast of characters, face moral dilemmas, and make decisions that shape your journey — and the fate of the kingdom.
+Romance, betrayal, and hidden agendas await!
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ACT I 
+
+Ever since you were little you were fascinated with all things magic. They called to you.
+Your mother used to call you her 'little fairy'. It was just something you always remember, the fascination, the interest, the thirst for knowledge and for... more.
+                 
+But you'd never guess that the king, desperate for his land and his people because of the curse that looms and grabs ahold of his kingdom inch by inch each day... would send for you.
+The curse, from what you've heard in the letter was terrible. Bloody and merciless. Spreading across all the land, slowly turning its people into stone.
+                 
+And so, after saying your goodbyes and packing up the few belonging you'd need and possess, you embark on the next ship to the Kingdom of Elaria, with the King's calling letter in your pocket, proof of his request... more similar to a demand, in all actuality. Since no one can defy a King. Not really.
+
+---------------------------------------------------------
+
+By the time you reach the village of Greybrook, in the outskirts of Elaria, dusk is already settling in.
+The air feels heavy... unnaturally still.
+                 
+As you look around, taking in the strees, the people and their restlessness, the tension that fills the air seems to be coming from within the center of the square, where a small crowd has gathered.
+
+A man lies on the ground, his right arm completely turned to stone, the transformation creeping slowly toward his chest.
+                 
+A woman kneels beside him, gripping his hand despite the cold marble skin.
+When she notices you watching, her eyes narrow, sharp and desperate. 
+It is clear she's on the fence about your presence here. This town is certainly not welcomed to newcomers after all, especially not since after the curse.
+                 
+"If you're here to stare, keep walking,"  she says coldly.
+                 
+-----------------------------------------------------------
+
+1) Comfort her 
++2Moral
++2Mira
+
+2) Questions about the curse
++1Moral
+-1Mira
+
+3) The king will help
+-2Moral
+-2Mira
+
+-----------------------------------------------------------
+
+1)
+The woman exhales shakily as you kneel beside her.
+She doesn't pull away.
+
+“My name is Mira,” she says quietly.
+
+You nod as she introduces herself and offer the courtesy of doing the same, speaking quietly back to her.
+
+"I'm {{ world.name }}... and what is his name?," you place a hand on the man's shoulder gently, assessing the curse as it takes its toll on his body. His eyes half-lidded, face blank and mind almost absent. Probably in shock... Perhaps denial? Sorrow, is the most likely.    
+
+"... Joseph..."she says in a quiet and grief stricken voice.
+As you look between them, assessing the state of the arm and the manner in which she is speaking, you understand the loss, what everyone around you is thinking and feeling before they have to spell it out for you. 
+
+"How long until...?" you ask her quietly.
+                        
+"Hours... maybe less. The curse moves fast..."she answers back, still keeping her hand in his and not leaving his side.
+
+"I'm sorry... Is there anything I can do?" you ask gently, placing a hesitant hand on her shoulder as well. The gesture small but grounding, offering not only your assistance but your comfort as you follow along to her lead. 
+Having Joseph be comfortable in his last hours, is all you can do and it's something that will never leave your mind for one thing is to read about a curse... but being face to face with it is a whole different beast.
+
+After Joseph is gone and just another statue in the village's history, one stone face amongst many, Mira finally stands up. 
+You follow her movements.
+
+
+2)
+"He was cursed... It's real" you whisper to yourself, not expecting such a sight right away as you arrived in the village.
+"Is he suffering? How long ago did he-"
+
+"Do you mind?" she snaps, eyes filled with grief and annoyance as she looks up at you before taking a shaky breath.
+"This started at noon,” she says. “Magic was involved. Happy?”
+
+She's clearly got bigger worries right now than you and your questions and her tone is fiery and challenging as she answers.
+But at the same time, you cannot help yourself from seeking more knowledge on the curse, on how it operates and spreads, on why it's here.
+
+"I'm sorry..." you say quietly, taking a step closer, looking at his stone-turned arm <em>"Is there any way to revert it? To help him?"</em>
+
+"No there-" she snaps, taking another shaky breath, her hands trembling slightly as they hold his. 
+His body laying pliant there, expression blank as shock, loss and sorrow all take over, leaving him to take comfort in her alone and vice versa. 
+  
+"You can't fight this level of magic,” she says, voice with a touch of anger at the situation, "My advice? Leave while you can..." she whispers before moving to comfort the man and make him more comfortable for his final hours. 
+The people around us coming to her aid, until he is gone and just another statue in the village's history, one stone face amongst many,
+
+3) 
+Her expression hardens immediately.
+
+“The King?” she spits.“He let this happen.”
+
+Confused, you try and ask more, to pry into her reaction some more. After all, what could she have meant with that? The King is a powerful and benevolent ruler, he has done his best in these years in managing and researching the curse... He's even brought you here and you have the letter to prove it, so he does care!
+
+But upon seeing the woman's face, hard and set on her beliefs, struggling and pained as she holds the man to her and comforts him in what you can only assume are his final moments to come, you decide to leave it be. To at least try and-
+
+“Leave. We don't want your kind here."</em> she cuts of any intent you have, brushing you to the side as the people around you come to her aid and help tend for the man.
+
+Feeling like the odd on out in their mix and like your presence is only hindering in their aid, you step oblige to her words and aside. Watching from the sidelines as everyone tends to him. Everyone coming together to help as his body lays pliant there, expression blank as shock, loss and sorrow all take over, his eyes already dead, as if resigned to his fate.
+
+The grief is felt heavy in the air after he is gone and just another statue in the village's history, one stone face amongst many. And you swear you can hear the faintest cry in the distance...
+
+-----------------------------------------
+
+1) Stay and Speak
++1Moral
++1Mira
+
+2) Leave Greybrook
++1Moral
+
+-----------------------------------------
+
+1)
+The woman exhales shakily as she stands, spotting you in the distance. Her steps deliberate and slow until she stands before you, her gaze locked on you and your form, making you squirm under the intensity of it and the grief that hangs in the air.
+
+MIRA >= 0                    
+
+    MIRA == 0
+
+    “My name is Mira,” she says quietly.
+
+    You nod as she introduces herself and offer the courtesy of doing the same, speaking quietly back to her.
+
+    "I'm {{ world.name }}... I am... sorry for your friend," you speak up quietly, matching her tone and offering a small glimpse of kindness and comfort. Trying to hold space for her grief and her pain while trying to also not duel in it, to not cause her discomfort or more pain.
+
+
+"You didn't have to stay," she speaks, standing next to you and joining you where you stand, looking over the statues of people on the town's square. 
+
+She stands beside you in silence for a long moment, the two of you facing the square.
+Stone faces catch the torchlight — frozen expressions of fear, confusion, sometimes peace.
+
+"I know," you answer quietly.
+The words feel small, inadequate — but honest.
+
+Mira nods once.
+"Most don't."
+
+"They used to laugh here," she continues softly, almost to herself.
+"Market days were loud. Children everywhere."
+
+Her fingers curl into her palm as she exhales.
+"Now no one looks too long. As if that might invite it..."
+
+Her gaze lingers on you for a moment longer before she looks back to the square.
+"If you're staying... you should know this isn't the first village."
+
+"The curse comes in waves," she continues.
+"Sometimes weeks apart. Sometimes days... Always from the Capital... And it's reaching our borders now... our Shrine... It was supposed to be a peaceful place to pray for your loved ones. For their soul," she motions to the statues "Now we can't even do that much..." her hand falls back to her side, motionless, her eyes adverting from the sight. Pained.
+
+The implication settles heavily between you. The air feels colder as night settles in fully, grief clinging to the village like fog.
+
+
+MIRA < 0
+
+The woman doesn't slow when she passes you.
+
+"Curiosity won't save anyone," she snaps over her shoulder.
+"And pity won't stop the curse."
+
+Others step between you and the square — not aggressively, but firmly.
+The message is clear enough.
+
+You are allowed to stay.
+You are not welcome.
+
+With that realization dawning on you, you advert your gaze from the sight of the square. 
+Looking away from the sight of those stone faces as they catch the torchlight — frozen expressions of fear, confusion, sometimes peace.
+
+Grief is your only blanket, your only friend, as it hangs off of everyone there present, it's presence like a suffocating fog that none can seem to shake of. It's engulfing this town, it's people... you see it in their eyes, hear it in their tired and pained whispers. For them, there is no cure, no hope... only pain.
+  
+The woman you spoke to is long since gone now.
+But you can still hear some whispers from the town's people, "...and Mira said it's reaching our borders now... our Shrine... She was there with Joseph when it happened..."</em> they motions to the statues <em>"Now look at him... poor soul..."
+
+The implication settles heavily between you. The air feels colder as night settles in fully and does nothing to help the chill up your spine.
+
+
+2)
+You turn away from the square as the last light fades, the murmurs of the crowd dulling behind you.
+No one stops you.
+
+Grief is your only blanket, your only friend, as it hangs off of everyone there present, it's presence like a suffocating fog that none can seem to shake of. It's engulfing this town, it's people... you see it in their eyes, hear it in their tired and pained whispers. For them, there is no cure, no hope... only pain.
+   
+The woman you spoke to is long since gone now.
+But you can still hear some whispers from the town's people, "...and Mira said it's reaching our borders now... our Shrine... She was there with Joseph when it happened... It was supposed to be a peaceful place to pray for your loved ones. For their soul,"</em> they motions to the statues <em>"Now we can't even do that much..."
+ 
+The implication settles heavily within you and the air feels colder as night settles in fully, doing nothing to help the chill up your spine.
+
+The road out of Greybrook is narrow and uneven, flanked by fields left untended.
+A cart lies abandoned near the path, its wheel half-sunken into the mud.
+
+Further ahead, something catches your eye.
+
+A dog — or what once was one — sits frozen mid-stride near the roadside, stone fur bristling as if it had tried to flee.
+
+Your stomach twists.
+The curse is not confined to people.
+
+The night grows colder as you walk, the weight of the King's letter heavy in your pocket.
+For the first time, you wonder if reaching the capital will be soon enough.
+
+Traveling seems difficult with the darkness and the abandoned fields... 
+
+--------------------------------------------------------
+
+1) Stay the night
++1Moral
++1Mira
+
+2) Leave
++2Curse
+
+3) Shrine
++2Moral 
++2Elowen
+
+--------------------------------------------------------
+
+1)
+Having chosen to linger in Greybrook since the night is already settling slowly, lanterns lit one by one as people return to what remains of their routines, you try and keep to yourself, offering help when it is accepted, listening more than speaking.
+
+Some villagers turn away when they see you.
+Others hesitate… then allow you to carry water, hold a door, sit nearby in silence.
+
+You hear fragments of stories.
+Names spoken carefully. Places no one visits anymore.
+They speak of the town's inn, The Sweet Spot, a small but cheap place where you can sleep and catch on your rest after everything that has happened and you've witnessed here today.
+
+You make note of its name and its location, letting hunger and exhaustion guide you and work as your clocks as they catch up with you. Demanding to find some respite and nourishment.
+When you get there, the inn is quiet, its common room half-empty, the fire kept low casting small shadows as the fire dances with itself... You find that this place has a distinct smell of lavender and fresh baked bread, while also possessing a very intimate atmosphere, making it easy for one to feel at ease here.
+
+With all these shadows and soft glowing lights around you, as well as the cheap meal you are able to order, you let your guard down and settle neatly into your seat. Your jacket draped on the chair you sit at and your sleeves rolled as you enjoy the warmth of the fire and of the delicious broth and breath you are eating. 
+
+That said, you fail to notice Mira has also entered the inn, having a room there too and having noticed all your actions so far. How you spoke to the people... how you leave your coin on the counter without asking for change...
+
+By the time you lay down to sleep, the village feels a little less like stone.
+
+2)
+You choose to leave Greybrook under cover of darkness, the road slick beneath your boots.
+A stranger to the clouds gathering quickly overhead and to how the air above starts to become heavy with the promise of rain.
+
+You are deep in the path and in your thoughts when you feel it, soft and gentle.
+It begins to drizzle. Drops are falling down randomly at first, before the sky opens.
+You spot shelter just in time — the remains of a house half-collapsed, its roof still intact enough to keep the worst of the rain out.
+
+Inside, shapes emerge as your eyes adjust.
+A family, frozen mid-meal.
+A child reaching for something that will never arrive.
+
+Outside, in the yard, animals stand locked in panic — a horse reared halfway, birds turned to stone where they once perched.
+
+The curse is not selective.
+It is not merciful.
+Your stomach twists as you can barely keep eye contact with it all, avoiding looking to the expressions forever etched into their face.
+Your heart aching for everyone whose life was cut short with such a painful and unforgiving fate, thoughts racing with helplessness and sorrow for their pain echoed by the sound of the rain.
+
+The rain pounds on the broken roof as you then crouch down among the statues, your knees to your chest and head buried in them as you hold yourself and calm the feelings itching within you. You pause and focus solely on the rhythmic sound of the rain, letting your mind quiet down and think of Mira.
+Of the square.
+Of how quickly life becomes still.
+
+When the storm finally eases, dawn has arrived and you leave knowing more than you did before, and wishing you didn't.
+
+3)
+You decide to take the path to the Shrine. It is treacherous as it is narrow and overgrown, winding up the hill beyond the village. A small detour from the main road to the Capital.
+The air changes as you climb — lighter, humming faintly, as if the world itself is holding its breath.
+
+The shrine itself is older than Greybrook.
+You can tell by how the stone is worn smooth by time, possessing symbols half-erased but still pulsing with quiet intent of prayers and beliefs. The runes still humming faintly beneath your fingers when you brush against them in passing.
+
+As you step closer to its entrance, to the big wooden doors that await you, something stirs. Something inside you... inside your heart... soft and almost imperceptible.
+Not fear — recognition.  
+
+Ever since you were little, you were fascinated with all things magic.
+They called to you.
+Your mother used to call you her 'little fairy'.
+
+You don't know why you're thinking of such memories now, nor why you feel like the Shrine is responding. 
+Not with words, with warmth... and with a quiet pull that settles deep in your bones. 
+
+“So it's begun again,” a calm voice says from behind you.
+
+You turn to see a woman wrapped in layered cloth standing at the edge of the shrine's light, her presence steady, deliberate.
+Her eyes linger on the markings, then on you. 
+
+“Elowen,” she introduces herself. "I'm the keeper of these grounds"
+
+"I'm {{ world.name }}... I am... sorry for your town... your people," you speak up quietly, matching her tone and offering a small glimpse of kindness and comfort... Unsure of what else to even say...
+
+She looks past you, toward Greybrook, as it stands below. In it's broken and grief stricken state.
+“You should listen carefully,” she adds, "If the shrine answered you, then the curse is not just spreading — it's searching.”
+
+She meets your gaze without flinching.
+“Magic always knows who listens.”She smiles softly, her eyes with a mix of sadness and of comfort.

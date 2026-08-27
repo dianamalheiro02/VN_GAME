@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block scene_bg %}
+<div class="scene-bg" style="background-image: url('{{ url_for('static', filename='1.png') }}');"></div>
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="story-card">
+
+        <h1>The Cursed Kingdom</h1>
+        <p class="subtitle">A curse spreads. A king demands. You answer.</p>
+
+        {% if meta %}
+        <div class="save-meta">
+            <p class="save-meta__label">Continue journey</p>
+            <p class="save-meta__detail">
+                {{ meta.player_name }} &mdash; {{ meta.location }}
+            </p>
+            <p class="save-meta__timestamp">
+                Last saved: {{ meta.saved_at | replace("T", " ") | truncate(19, True, "") }} UTC
+            </p>
+        </div>
+
+        <form method="POST" action="/continue" style="margin-top: 24px;">
+            <button class="btn btn--primary" type="submit">Continue</button>
+        </form>
+
+        <div class="landing__divider">or</div>
+
+        <form method="POST" action="/new_game"
+              onsubmit="return confirm('Begin anew? Your current save will be lost.');">
+            <button class="btn btn--ghost" type="submit">New Game</button>
+        </form>
+
+        {% else %}
+
+        <form method="POST" action="/new_game" style="margin-top: 24px;">
+            <button class="btn btn--primary" type="submit">Begin</button>
+        </form>
+
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

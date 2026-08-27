@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cursed Kingdom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    {# Scene background — templates set data-bg on <body> or override via block #}
+    {% block scene_bg %}{% endblock %}
+
+    <a class="debug-link" href="/debug">Debug</a>
+
+    {% block content %}{% endblock %}
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>

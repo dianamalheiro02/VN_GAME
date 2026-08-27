@@ -1,0 +1,30 @@
+id: shrine_elowen3
+template: story/shrine_elowen2.html
+
+text_blocks:
+  - condition: elowen_memory_left
+    text:
+      - "You step back."
+      - "Whatever this is… it's too much. Too strange. Too unknown."
+      - "The pull in your chest resists for just a moment, as if something unseen is reluctant to let you go."
+      - "But you turn anyway."
+      - "The path down feels steeper than before, your footing uncertain as you put distance between yourself and the Shrine."
+      - "'Running won't silence it,' a calm voice calls from behind you."
+      - "You freeze."
+      - "Slowly, you glance back."
+      - "A woman now stands where the light of the shrine meets the shadow of the hill, her figure still, composed."
+      - "'Elowen,' she says, as if introductions still matter. 'Keeper of these grounds.'"
+      - "You don't move closer this time."
+      - "Neither does she."
+      - "Her gaze drifts briefly toward Greybrook below, then back to you."
+      - "'It reached for you,' she continues. 'You felt it. That does not fade simply because you walk away.'"
+      - "There is no accusation in her voice. Only certainty."
+      - "'The curse is spreading,' she adds softly. 'But more than that… it is searching.'"
+      - "A pause."
+      - "'And whether you face it now or later… it will find you again.'"
+
+choices:
+  continue:
+    text: "Continue your journey"
+    effects: {}
+    next_node: act2_intro

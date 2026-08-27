@@ -1,0 +1,13 @@
+id: intro
+template: story/intro.html
+
+text_blocks:
+  - "Ever since you were little you were fascinated with all things magic. They called to you. Your mother used to call you her 'little fairy'. It was just something you always remember, the fascination, the interest, the thirst for knowledge and for... more."
+  - "But you'd never guess that the king, desperate for his land and his people because of the curse that looms and grabs ahold of his kingdom inch by inch each day... would send for you. The curse, from what you've heard in the letter, was terrible. Bloody and merciless. Spreading across all the land, slowly turning its people into stone."
+  - "And so, after saying your goodbyes and packing up the few belongings you'd need, you embark on the next ship to the Kingdom of Elaria, with the King's calling letter in your pocket, proof of his request... more similar to a demand, in all actuality. Since no one can defy a King. Not really."
+
+choices:
+  begin:
+    text: "Begin your journey"
+    effects: {}
+    next_node: greybrook_square

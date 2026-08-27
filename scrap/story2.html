@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%230058ff%22></rect><path fill=%22%23fff%22 d=%22M72.15 21.33L72.15 21.33Q74.49 22.50 74.90 25.02Q75.30 27.54 73.59 29.61L73.59 29.61Q72.42 31.23 70.58 31.41Q68.73 31.59 66.84 30.69L66.84 30.69Q64.68 29.70 62.30 29.16Q59.91 28.62 57.30 28.62L57.30 28.62Q52.44 28.62 48.62 30.15Q44.79 31.68 42.09 34.52Q39.39 37.35 38.00 41.22Q36.60 45.09 36.60 49.77L36.60 49.77Q36.60 55.26 38.18 59.31Q39.75 63.36 42.54 66.06Q45.33 68.76 49.11 70.07Q52.89 71.37 57.30 71.37L57.30 71.37Q59.73 71.37 62.16 70.92Q64.59 70.47 66.84 69.30L66.84 69.30Q68.73 68.40 70.58 68.67Q72.42 68.94 73.68 70.56L73.68 70.56Q75.48 72.81 74.99 75.20Q74.49 77.58 72.24 78.66L72.24 78.66Q69.90 79.83 67.43 80.60Q64.95 81.36 62.43 81.77Q59.91 82.17 57.30 82.17L57.30 82.17Q50.82 82.17 45.02 80.10Q39.21 78.03 34.67 73.98Q30.12 69.93 27.51 63.86Q24.90 57.78 24.90 49.77L24.90 49.77Q24.90 42.84 27.29 36.99Q29.67 31.14 34.04 26.87Q38.40 22.59 44.34 20.21Q50.28 17.82 57.30 17.82L57.30 17.82Q61.26 17.82 65.04 18.72Q68.82 19.62 72.15 21.33Z%22></path></svg>" />
+<meta charset="UTF-8">
+<meta http-equiv=“Pragma” content=”no-cache”>
+<meta http-equiv=“Expires” content=”-1″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="../static/styletck.css">
+
+<title>Adventure Game</title>
+</head>
+
+<body>
+    <div class="tck">
+        <div id="tck-story">
+            
+            <h1>The Village at Dusk</h1>
+
+            <aside class="stats-panel">
+                <h3>{{ world.name }}'s Status</h3>
+
+                <ul class="stat-list">
+                    <li>
+                        <span class="stat-name">Location:</span>
+                        <span class="stat-value">{{ world.location }}</span>
+                    </li>
+
+                    <li>
+                        <span class="stat-name">Morality:</span>
+                        <span class="stat-value">{{ world.morality }}</span>
+                    </li>
+
+                    <li>
+                        <span class="stat-name">Character's Relationships:</span>
+                        <li>
+                        {% for npc in world.npc_trust %}
+                            <span class="stat-name">{{ npc }}: {{ world.npc_trust[npc] }}</span>
+                        {% endfor %}
+                        </li>
+                    </li>
+
+                    <li>
+                        <span class="stat-name">Curse Progression:</span>
+                        <span class="stat-value">{{ world.curse_stage }}</span>
+                    </li>
+                </ul>
+            </aside>
+
+
+
+
+            <section class="story-text">
+                {% if world.last_choice == "comfort" %}
+                    <p>
+                        The woman exhales shakily as you kneel beside her.
+                        She doesn't pull away.
+                    </p>
+                    <p>
+                        <em>“My name is Mira,”</em> she says quietly.
+                    </p>
+                    <p>
+                        You nod as she introduces herself and offer the courtesy of doing the same, speaking quietly back to her.
+
+                        <em>"I'm {{ world.name }}... and what is his name?,"</em> you place a hand on the man's shoulder gently, assessing the curse as it takes its toll on his body. His eyes half-lidded, face blank and mind almost absent. Probably in shock... Perhaps denial? Sorrow, is the most likely.    
+                    </p>
+                    <p>
+                        <em>"... Joseph..."</em> she says in a quiet and grief stricken voice.
+                        As you look between them, assessing the state of the arm and the manner in which she is speaking, you understand the loss, what everyone around you is thinking and feeling before they have to spell it out for you. 
+                    </p>
+                    <p>
+                        <em>"How long until...?"</em> you ask her quietly.
+                        
+                        <em>"Hours... maybe less. The curse moves fast..."</em> she answers back, still keeping her hand in his and not leaving his side.
+
+                        <em>"I'm sorry... Is there anything I can do?"</em> you ask gently, placing a hesitant hand on her shoulder as well. The gesture small but grounding, offering not only your assistance but your comfort as you follow along to her lead. 
+                        Having Joseph be comfortable in his last hours, is all you can do and it's something that will never leave your mind for one thing is to read about a curse... but being face to face with it is a whole different beast.
+                    </p>
+                    <p>
+                        After Joseph is gone and just another statue in the village's history, one stone face amongst many, Mira finally stands up. 
+                        You follow her movements.
+                    </p>
+
+                {% elif world.last_choice == "questions" %}
+                    <p>
+                        <em>"He was cursed... It's real"</em> you whisper to yourself, not expecting such a sight right away as you arrived in the village.
+                        <em>"Is he suffering? How long ago did he-"</em>
+                    </p>
+                    <p>
+                        <em>"Do you mind?"</em> she snaps, eyes filled with grief and annoyance as she looks up at you before taking a shaky breath.
+                        <em>"This started at dawn,”</em> she says. <em>“Magic was involved. Happy?”</em>
+                    </p>
+                    <p>
+                        She's clearly got bigger worries right now than you and your questions and her tone is fiery and challenging as she answers.
+                        But at the same time, you cannot help yourself from seeking more knowledge on the curse, on how it operates and spreads, on why it's here.
+
+                        <em>"I'm sorry..."</em> you say quietly, taking a step closer, looking at his stone-turned arm <em>"Is there any way to revert it? To help him?"</em>
+                    </p>
+                    <p>
+                        <em>"No there-"</em> she snaps, taking another shaky breath, her hands trembling slightly as they hold his. 
+                        His body laying pliant there, expression blank as shock, loss and sorrow all take over, leaving him to take comfort in her alone and vice versa. 
+                    </p>
+                    <p>    
+                        <em>"You can't fight this level of magic,”</em> she says, voice with a touch of anger at the situation, <em>"My advice? Leave while you can..."</em> she whispers before moving to comfort the man and make him more comfortable for his final hours. 
+                        The people around us coming to her aid, until he is gone and just another statue in the village's history, one stone face amongst many,
+                    </p>
+
+                {% elif world.last_choice == "crown" %}
+                    <p>
+                        Her expression hardens immediately.
+                    </p>
+                    <p>
+                        <em>“The King?”</em> she spits. <em>“He let this happen.”</em>
+                    </p>
+                    <p>
+                        Confused, you try and ask more, to pry into her reaction some more. After all, what could she have meant with that? The King is a powerful and benevolent ruler, he has done his best in these years in managing and researching the curse... He's even brought you here and you have the letter to prove it, so he does care!
+                    </p>
+                    <p>
+                        But upon seeing the woman's face, hard and set on her beliefs, struggling and pained as she holds the man to her and comforts him in what you can only assume are his final moments to come, you decide to leave it be. To at least try and-
+                    </p>
+                    <p>
+                        <em>“Leave. We don't want your kind here."</em> she cuts of any intent you have, brushing you to the side as the people around you come to her aid and help tend for the man.
+                    </p>
+                    <p>
+                        Feeling like the odd on out in their mix and like your presence is only hindering in their aid, you step oblige to her words and aside. Watching from the sidelines as everyone tends to him. Everyone coming together to help as his body lays pliant there, expression blank as shock, loss and sorrow all take over, his eyes already dead, as if resigned to his fate.
+                    </p>
+                    <p>
+                        The grief is felt heavy in the air after he is gone and just another statue in the village's history, one stone face amongst many. And you swear you can hear the faintest cry in the distance...
+                    </p>
+                {% endif %}
+            </section>
+
+            <form method="post">
+                <button class="btn" name="choice" value="speak">
+                    Stay and speak to her again
+                </button>
+                <button class="btn" name="choice" value="leave">
+                    Leave Greybrook before nightfall
+                </button>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</body>
+
+
+<!-- Our codes -->
+<!--script src="js/main.js"></script-->

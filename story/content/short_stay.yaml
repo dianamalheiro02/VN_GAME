@@ -1,0 +1,51 @@
+id: short_stay
+template: story/short_stay.html
+
+text_blocks:
+  - condition: mira_memory_short_stay
+    text:
+      - "You turn away from the square as the last light fades, the murmurs of the crowd dulling behind you. No one stops you."
+      - "Grief is your only blanket, your only friend, hanging off of everyone present like a suffocating fog that none can seem to shake. It's engulfing this town, its people. You see it in their eyes, hear it in their tired and pained whispers. For them, there is no cure, no hope... only pain."
+      - "You can still hear whispers from the townspeople: '...and Mira said it's reaching our borders now... our Shrine... She was there with Joseph when it happened. It was supposed to be a peaceful place to pray. For their soul.' They motion to the statues. 'Now we can't even do that much...'"
+      - "The road out of Greybrook is narrow and uneven, flanked by fields left untended. A cart lies abandoned near the path, its wheel half-sunken into the mud."
+      - "Further ahead, something catches your eye. A dog — or what once was one — sits frozen mid-stride near the roadside, stone fur bristling as if it had tried to flee."
+      - "Your stomach twists. The curse is not confined to people."
+      - "The night grows colder as you walk, the weight of the King's letter heavy in your pocket. For the first time, you wonder if reaching the capital will be soon enough."
+
+choices:
+  night:
+    text: "Stay the night"
+    effects:
+      ethics.compassion: 2
+      attr.presence: 2
+      attr.intellect: 1
+      attr.resolve: 2
+      event: long_stay
+      instability: -1
+      knowledge: greybrook_inn
+    next_node: inn_greybrook
+
+  leave:
+    text: "Leave Greybrook"
+    effects:
+      ethics.authority: 1
+      attr.intellect: 1
+      attr.resolve: -2
+      attr.physique: 2
+      event: storm_house
+      instability: -2
+      knowledge: saw_effects
+    next_node: storm_house
+
+  shrine:
+    text: "Seek the Shrine"
+    effects:
+      ethics.curiosity: 2
+      attr.presence: 1
+      attr.intellect: 2
+      attr.resolve: 2
+      attr.physique: 1
+      event: visit_shrine
+      instability: -1
+      knowledge: shrine_called_to_you
+    next_node: shrine_elowen

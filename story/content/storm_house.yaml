@@ -1,0 +1,25 @@
+id: storm_house
+template: story/storm_house.html
+
+text_blocks:
+  - "You choose to leave Greybrook under cover of darkness, the road slick beneath your boots. A stranger to the clouds gathering quickly overhead and to how the air above starts to become heavy with the promise of rain."
+  - "You are deep in the path and in your thoughts when you feel it, soft and gentle."
+  - "It begins to drizzle. Drops are falling down randomly at first, before the sky opens."
+  - "You spot shelter just in time, the remains of a house half-collapsed, its roof still intact enough to keep the worst of the rain out."
+  - "Inside, shapes emerge as your eyes adjust..."
+  - "A family, frozen mid-meal..."
+  - "A child reaching for something that will never arrive..."
+  - "Outside, in the yard, animals stand locked in panic, a horse reared halfway, birds turned to stone where they once perched."
+  - "The curse is not selective. It is not merciful."
+  - "Your stomach twists as you can barely keep eye contact with it all, avoiding looking to the expressions forever etched into their face."
+  - "Your heart aching for everyone whose life was cut short with such a painful and unforgiving fate, thoughts racing with helplessness and sorrow for their pain echoed by the sound of the rain."
+  - "The rain pounds on the broken roof as you then crouch down among the statues, your knees to your chest and head buried in them as you hold yourself and calm the feelings itching within you. You pause and focus solely on the rhythmic sound of the rain, letting your mind quiet down and think of Mira."
+  - "Of the town's square..."
+  - "Of how quickly life becomes still..."
+  - "When the storm finally eases, dawn has arrived and you leave. Standing on slightly shaking knees and your head down, burdened now with knowing more than you did before... and wishing you didn't."
+
+choices:
+  continue:
+    text: "Continue toward the Capital"
+    effects: {}
+    next_node: act2_intro

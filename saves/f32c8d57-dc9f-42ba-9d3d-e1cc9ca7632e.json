@@ -1,0 +1,57 @@
+{
+  "player_id": "f32c8d57-dc9f-42ba-9d3d-e1cc9ca7632e",
+  "saved_at": "2026-03-30T15:29:51.787944+00:00",
+  "world": {
+    "current_node": "greybrook_square",
+    "location": "Greybrook",
+    "player": {
+      "name": "Adventurer",
+      "ethics": {
+        "compassion": 0,
+        "authority": 0,
+        "curiosity": 0
+      },
+      "attributes": {
+        "intellect": 0,
+        "resolve": 0,
+        "presence": 0,
+        "physique": 0
+      },
+      "knowledge": [],
+      "scars": []
+    },
+    "curse_stage": 1,
+    "instability": 0,
+    "flags": [],
+    "npcs": {
+      "Mira": {
+        "values": {
+          "compassion": 1.5,
+          "authority": -1.0,
+          "curiosity": 0.5
+        },
+        "beliefs": {
+          "king_failed_us": true,
+          "magic_is_dangerous": true
+        },
+        "memory": [],
+        "openness": 0.8,
+        "suspicion": 1.2
+      },
+      "Elowen": {
+        "values": {
+          "compassion": 0.8,
+          "authority": -0.5,
+          "curiosity": 2.0
+        },
+        "beliefs": {
+          "magic_is_alive": true,
+          "curse_has_intent": true
+        },
+        "memory": [],
+        "openness": 1.5,
+        "suspicion": 0.5
+      }
+    }
+  }
+}

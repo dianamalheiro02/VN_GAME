@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{# ---------------------------------------------------------------
+   VN Scene template.
+   Extending templates must set:
+     {% set bg_image = "filename.png" %}
+   and can optionally override {% block vn_extra_js %}
+   --------------------------------------------------------------- #}
+
+{% block scene_bg %}
+<div class="scene-bg" style="background-image: url('{{ url_for('static', filename=bg_image) }}');"></div>
+{% endblock %}
+
+{% block content %}
+
+<!-- Choice overlay (hidden until text complete) -->
+<div class="vn-choices" id="vn-choices">
+    <p class="vn-choices__prompt">What do you do?</p>
+    <form method="post">
+        {% for key, choice in node.choices.items() %}
+            <button class="vn-btn" name="choice" value="{{ key }}">
+                {{ choice.text }}
+            </button>
+        {% endfor %}
+    </form>
+</div>
+
+<!-- Textbox -->
+<div class="vn-screen">
+    <div class="vn-textbox" id="vn-textbox">
+        <p class="vn-text" id="vn-text"></p>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function () {
+    const blocks   = {{ text_blocks | tojson }};
+    const textEl   = document.getElementById('vn-text');
+    const textbox  = document.getElementById('vn-textbox');
+    const choices  = document.getElementById('vn-choices');
+
+    let blockIdx   = 0;
+    let charIdx    = 0;
+    let current    = '';
+    let timer      = null;
+    const SPEED    = 22; // ms per character
+
+    function type(text) {
+        clearInterval(timer);
+        textEl.textContent = '';
+        current  = text;
+        charIdx  = 0;
+        textbox.classList.remove('typing-done');
+
+        timer = setInterval(() => {
+            textEl.textContent += current[charIdx];
+            charIdx++;
+            if (charIdx >= current.length) {
+                clearInterval(timer);
+                textbox.classList.add('typing-done');
+            }
+        }, SPEED);
+    }
+
+    function advance() {
+        // Skip to end if mid-type
+        if (charIdx < current.length) {
+            clearInterval(timer);
+            textEl.textContent = current;
+            charIdx = current.length;
+            textbox.classList.add('typing-done');
+            return;
+        }
+
+        if (blockIdx < blocks.length) {
+            type(blocks[blockIdx]);
+            blockIdx++;
+        } else {
+            // All blocks done — reveal choices
+            textbox.removeEventListener('click', advance);
+            choices.classList.add('visible');
+        }
+    }
+
+    textbox.addEventListener('click', advance);
+
+    // Keyboard: space / enter to advance, escape to skip all
+    document.addEventListener('keydown', e => {
+        if (e.code === 'Space' || e.code === 'Enter') {
+            e.preventDefault();
+            advance();
+        }
+    });
+
+    // Begin
+    advance();
+})();
+</script>
+{% endblock %}

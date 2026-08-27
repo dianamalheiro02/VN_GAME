@@ -1,0 +1,29 @@
+# Knowledge Registry
+# Maps short identifier keys to the full display text shown in the player's journal.
+# Effects in nodes should reference the KEY, never the full sentence.
+
+joseph_died_comforted: "Joseph died to the curse. The curse moves fast and according to Mira, there was nothing to be done but make him comfortable in his final moments."
+
+joseph_died_interrogated: "Saw a man die to the curse. A local woman said it began at noon, meaning it took less than half a day to take full effect. There seems to be nothing that can cure it so far."
+
+joseph_died_authority: "Saw a man die to the curse. The locals want nothing to do with myself or the King. The mere mention of His Royal Highness put them on edge and sparked a reaction I cannot yet identify."
+
+###
+curse_reaches_shrine: "The curse has spread from the Capital outwards. It has now begun reaching the edge of town, including their temple. Their sacred grounds have been tainted... These people have been through so much..."
+
+curse_spreads_outward: "The curse has spread from the Capital outwards and has now begun reaching the edge of town, including their temple. Stone-turned animals and people adorn the roads... It was... an awful sight."
+
+###
+greybrook_inn: "Made it to the town's inn, The Sweet Spot, a small but cheap place from what I've heard. The inn is quiet, its common room half-empty, the fire kept low and casting small shadows as the fire dances with itself... It smelled of lavender and fresh baked bread, and honestly? Felt like home a bit."
+
+saw_effects: "Saw a family... animals... children... all petrified. Their lives halted and frozen due to this curse. I couldn't even bring myself to face them, to see their expressions... They must have been one of the first affected. Completely clueless and probably scared... I don't know how I'm supposed to help these people."
+
+shrine_called_to_you: "The shrine 'responded' to my touch? Elowen, the grounds keeper, said that if it answered you, the curse is searching for something... or someone. What does that mean?"
+
+shrine_called: "The shrine's keeper, Elowen, I think, startled me when I arrived there. She said that the shrine, or better, it's magic called out to me? I did not understand."
+
+shrine_scared: "The shrine... the connection... the woman... Elowen, she said... It was all too much. When she saw me and addressed me, I grew scared and left. She says the curse is not just spreading, it is searching... What could she have meant? Too late now... now I walk alone once more. To the Capital."
+
+###
+
+

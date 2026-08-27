@@ -1,0 +1,40 @@
+id: questions_elowen
+template: story/questions_elowen.html
+
+text_blocks:
+  - condition: elowen_memory_magic
+    text:
+      - "Her words settle deep and true in your chest, playing over and over again, non-stop, in your head."
+      - "...Magic..."
+      - "Such a word has always sparked your interest. Made you excited and curious."
+      - "It was practically all you ever wanted to listen about or study when you were young, and even now, not much is different."
+      - "And so, with a slight shaky and uncertain voice you speak up to Elowen, not able to contain yourself, 'Magic... Listens?'."
+      - "Her steps slow to match yours, her eyes looking you over slightly but no unkindly. Merely... assessing."
+      - ""
+      - ""
+
+  - condition: elowen_memory_curse
+    text:
+      - ""
+
+  - condition: elowen_memory_letter
+    text:
+      - ""
+
+choices:
+  listen:
+    text: ""
+    effects:
+      ethics.compassion: 
+      attr.presence: 
+      attr.intellect: 
+      attr.resolve: 
+      event: 
+      instability: 
+      knowledge: 
+    next_node: act2_intro
+
+  continue:
+    text: "Continue toward the Capital"
+    effects: {}
+    next_node: act2_intro

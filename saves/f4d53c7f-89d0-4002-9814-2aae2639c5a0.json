@@ -1,0 +1,63 @@
+{
+  "player_id": "f4d53c7f-89d0-4002-9814-2aae2639c5a0",
+  "saved_at": "2026-06-28T15:59:12.903233+00:00",
+  "world": {
+    "current_node": "joseph_aftermath",
+    "location": "Greybrook",
+    "player": {
+      "name": "Adventurer",
+      "ethics": {
+        "compassion": 2,
+        "authority": 0,
+        "curiosity": 0
+      },
+      "attributes": {
+        "intellect": 1,
+        "resolve": 2,
+        "presence": 2,
+        "physique": 0
+      },
+      "knowledge": [
+        "joseph_died_comforted"
+      ],
+      "scars": []
+    },
+    "curse_stage": 1,
+    "instability": -1,
+    "flags": [],
+    "npcs": {
+      "Mira": {
+        "values": {
+          "compassion": 1.5,
+          "authority": -1.0,
+          "curiosity": 0.5
+        },
+        "beliefs": {
+          "king_failed_us": true,
+          "magic_is_dangerous": true
+        },
+        "memory": [
+          "showed_empathy"
+        ],
+        "openness": 0.8,
+        "suspicion": 1.2
+      },
+      "Elowen": {
+        "values": {
+          "compassion": 0.8,
+          "authority": -0.5,
+          "curiosity": 2.0
+        },
+        "beliefs": {
+          "magic_is_alive": true,
+          "curse_has_intent": true
+        },
+        "memory": [
+          "showed_empathy"
+        ],
+        "openness": 1.5,
+        "suspicion": 0.5
+      }
+    }
+  }
+}

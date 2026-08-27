@@ -1,0 +1,83 @@
+id: shrine_elowen2
+template: story/shrine_elowen2.html
+
+text_blocks:
+  - condition: elowen_memory_listened
+    text:
+      - "You turn toward the voice."
+      - "A woman stands at the edge of the shrine's light, wrapped in layered cloth that shifts softly with the wind. Her presence is steady, grounded, as though she has stood here for a very long time."
+      - "Her gaze lingers briefly on the ancient markings before settling on you."
+      - "'Elowen,' she says, stepping closer. 'Keeper of these grounds.'"
+      - "For a moment, you simply stare. Then, catching yourself, you offer a quick introduction in return."
+      - "Silence follows, but it is not empty."
+      - "'I am… sorry,' you say at last, your voice quieter now. 'For your town. Your people.'"
+      - "The words feel small, but they are all you have."
+      - "Elowen's expression softens. She turns her gaze past you, toward Greybrook below, its grief still hanging in the air like smoke."
+      - "'Kindness still finds its way here,' she murmurs. 'That is… rare, these days.'"
+      - "Then, more serious now:"
+      - "'You should listen carefully. If the shrine answered you, then this curse is not merely spreading… it is searching.'"
+      - "Her eyes return to yours, unwavering."
+      - "'Magic always knows who listens.'"
+      - "A faint smile touches her lips, sad, but not without warmth."
+      - "Her arms open as she mentions inside the shrine. Walking ahead to guide you through it's big wooden doors."
+
+  - condition: elowen_memory_pressed_for_answers
+    text:
+      - "You turn sharply, eyes searching."
+      - "'Who's there?'"
+      - "The question leaves your lips before you can stop it, firm, edged with urgency."
+      - "A woman steps forward from the edge of the shrine's light, her figure emerging slowly, as though she had always been there… simply unseen."
+      - "Her layered garments whisper against the stone as she moves."
+      - "'Elowen,' she says calmly. 'Keeper of these grounds.'"
+      - "You don't respond right away."
+      - "Instead, your gaze narrows slightly. 'What did you mean?'"
+      - "There's no fear in your voice, only insistence."
+      - "Elowen studies you for a moment longer than is comfortable."
+      - "'Straight to the fracture,' she notes quietly. 'Good. Or dangerous.'"
+      - "She steps closer, close enough now that you can see the wear of time in her eyes."
+      - "'This place does not stir without reason,' she continues. 'And neither do you.'"
+      - "Her tone lowers, more deliberate now:"
+      - "'If the shrine answered you, then the curse is not only spreading… it is choosing.'"
+      - "The word lingers between you."
+      - "'Magic listens, yes… but it also calls.'"
+      - "A faint pause."
+      - "'The question is, why did you answer?'"
+      - "She lets the question hang in the air. Let's it settle within you. Before turning and walking to the shrine, to it's big wooden doors."
+      - "Looking back at you in a quiet invitation for you to follow her path."
+
+choices:
+  listen:
+    text: "Magic... Listening?"
+    effects:
+      ethics.curiosity: 2
+      attr.presence: 2
+      attr.intellect: 2
+      attr.resolve: 2
+      event: elowen_magic
+      instability: -1
+      knowledge: 
+    next_node: questions_elowen
+
+  question:
+    text: "Ask what she knows of the curse"
+    effects:
+      ethics.compassion: 2
+      attr.presence: 2
+      attr.intellect: 2 
+      attr.resolve: 1
+      event: elowen_curse
+      instability: -2
+      knowledge: 
+    next_node: questions_elowen
+
+  reveal:
+    text: "Pull the king's letter from your pocket"
+    effects:
+      ethics.authority: 1
+      attr.presence: -1 
+      attr.resolve: -1
+      attr.physique:  
+      event: elowen_king
+      instability: -1
+      knowledge: 
+    next_node: questions_elowen

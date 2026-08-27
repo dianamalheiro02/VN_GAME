@@ -1,0 +1,81 @@
+id: joseph_aftermath2
+template: story/joseph_aftermath2.html
+
+text_blocks:
+  - condition: mira_memory_pressed_for_answers
+    text:
+      - "'My name is Mira,' she says quietly."
+      - "You nod as she introduces herself and offer the courtesy of doing the same, speaking quietly back to her."
+      - "'I am... sorry for your friend,' you speak up quietly, matching her tone and offering a small glimpse of kindness and comfort — trying to hold space for her grief while not dwelling in it, not causing her more pain."
+      - "'You didn't have to stay,' she says, standing next to you, looking over the statues in the town's square."
+      - "She stands beside you in silence for a long moment. Stone faces catch the torchlight — frozen expressions of fear, confusion, sometimes peace."
+      - "'I know,' you answer quietly. The words feel small, inadequate — but honest."
+      - "Mira nods once. 'Most don't.'"
+      - "'They used to laugh here,' she continues softly, almost to herself. 'Market days were loud. Children everywhere.'"
+      - "Her fingers curl into her palm as she exhales. 'Now no one looks too long. As if that might invite it...'"
+      - "Her gaze lingers on you for a moment longer before she looks back to the square. 'If you're staying... you should know this isn't the first village.'"
+      - "'The curse comes in waves,' she continues. 'Sometimes weeks apart. Sometimes days... Always from the Capital... And it's reaching our borders now... our Shrine... It was supposed to be a peaceful place to pray for your loved ones. For their soul.' She motions to the statues. 'Now we can't even do that much...' Her hand falls back to her side, motionless, eyes averting from the sight. Pained."
+      - "The implication settles heavily between you. The air feels colder as night settles in fully, grief clinging to the village like fog."
+
+  - condition: mira_memory_showed_empathy
+    text:
+      - "'You didn't have to stay,' she says, standing next to you, looking over the statues in the town's square."
+      - "She stands beside you in silence for a long moment. Stone faces catch the torchlight — frozen expressions of fear, confusion, sometimes peace."
+      - "'I know,' you answer quietly. The words feel small, inadequate — but honest."
+      - "Mira nods once. 'Most don't.'"
+      - "'They used to laugh here,' she continues softly, almost to herself. 'Market days were loud. Children everywhere.'"
+      - "Her fingers curl into her palm as she exhales. 'Now no one looks too long. As if that might invite it...'"
+      - "Her gaze lingers on you for a moment longer before she looks back to the square. 'If you're staying... you should know this isn't the first village.'"
+      - "'The curse comes in waves,' she continues. 'Sometimes weeks apart. Sometimes days... Always from the Capital... And it's reaching our borders now... our Shrine... It was supposed to be a peaceful place to pray for your loved ones. For their soul.' She motions to the statues. 'Now we can't even do that much...' Her hand falls back to her side, motionless, eyes averting from the sight. Pained."
+      - "The implication settles heavily between you. The air feels colder as night settles in fully, grief clinging to the village like fog."
+
+  - condition: mira_memory_invoked_authority
+    text:
+      - "'You didn't have to stay,' she says, standing next to you, looking over the statues in the town's square."
+      - "She stands beside you in silence for a long moment. Stone faces catch the torchlight — frozen expressions of fear, confusion, sometimes peace."
+      - "'I know,' you answer quietly. The words feel small, inadequate — but honest."
+      - "Mira nods once. 'Most don't.'"
+      - "'They used to laugh here,' she continues softly, almost to herself. 'Market days were loud. Children everywhere.'"
+      - "Her fingers curl into her palm as she exhales. 'Now no one looks too long. As if that might invite it...'"
+      - "Her gaze lingers on you for a moment longer before she looks back to the square. 'If you're staying... you should know this isn't the first village.'"
+      - "'The curse comes in waves,' she continues. 'Sometimes weeks apart. Sometimes days... Always from the Capital... And it's reaching our borders now... our Shrine... It was supposed to be a peaceful place to pray for your loved ones. For their soul.' She motions to the statues. 'Now we can't even do that much...' Her hand falls back to her side, motionless, eyes averting from the sight. Pained."
+      - "The implication settles heavily between you. The air feels colder as night settles in fully, grief clinging to the village like fog."
+
+
+choices:
+  night:
+    text: "Stay the night"
+    effects:
+      ethics.compassion: 2
+      attr.presence: 2
+      attr.intellect: 1
+      attr.resolve: 2
+      event: long_stay
+      instability: -1
+      knowledge: greybrook_inn
+    next_node: inn_greybrook
+
+  leave:
+    text: "Leave Greybrook"
+    effects:
+      ethics.authority: 1
+      attr.intellect: 1
+      attr.resolve: -2
+      attr.physique: 2
+      event: storm_house
+      instability: -2
+      knowledge: saw_effects
+    next_node: storm_house
+
+  shrine:
+    text: "Seek the Shrine"
+    effects:
+      ethics.curiosity: 2
+      attr.presence: 1
+      attr.intellect: 2
+      attr.resolve: 2
+      attr.physique: 1
+      event: visit_shrine
+      instability: -1
+      knowledge: shrine_called_to_you
+    next_node: shrine_elowen

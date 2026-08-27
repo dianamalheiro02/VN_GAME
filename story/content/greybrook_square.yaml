@@ -1,0 +1,45 @@
+id: greybrook_square
+template: story/greybrook_square.html
+
+text_blocks:
+  - "By the time you reach the village of Greybrook, in the outskirts of Elaria, dusk is already settling in. The air feels heavy... unnaturally still."
+  - "As you look around, taking in the streets, the people and their restlessness, the tension that fills the air seems to be coming from within the center of the square, where a small crowd has gathered."
+  - "A man lies on the ground, his right arm completely turned to stone, the transformation creeping slowly toward his chest."
+  - "A woman kneels beside him, gripping his hand despite the cold marble skin. When she notices you watching, her eyes narrow, sharp and desperate. It is clear she's on the fence about your presence here. This town is certainly not welcoming to newcomers — not since the curse."
+  - "'If you're here to stare, keep walking,' she says coldly."
+
+choices:
+  comfort:
+    text: "Kneel and comfort her"
+    effects:
+      ethics.compassion: 2
+      attr.presence: 2
+      attr.intellect: 1
+      attr.resolve: 2
+      event: showed_empathy
+      instability: -1
+      knowledge: joseph_died_comforted
+    next_node: joseph_aftermath
+
+  questions:
+    text: "Ask about the curse"
+    effects:
+      ethics.curiosity: 2
+      attr.presence: -1
+      attr.intellect: 2
+      attr.resolve: 1
+      event: pressed_for_answers
+      instability: -1
+      knowledge: joseph_died_interrogated
+    next_node: joseph_aftermath
+
+  crown:
+    text: "Invoke the King's authority"
+    effects:
+      ethics.authority: 2
+      attr.presence: -2
+      attr.resolve: -1
+      event: invoked_authority
+      instability: -1
+      knowledge: joseph_died_authority
+    next_node: joseph_aftermath

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%230058ff%22></rect><path fill=%22%23fff%22 d=%22M72.15 21.33L72.15 21.33Q74.49 22.50 74.90 25.02Q75.30 27.54 73.59 29.61L73.59 29.61Q72.42 31.23 70.58 31.41Q68.73 31.59 66.84 30.69L66.84 30.69Q64.68 29.70 62.30 29.16Q59.91 28.62 57.30 28.62L57.30 28.62Q52.44 28.62 48.62 30.15Q44.79 31.68 42.09 34.52Q39.39 37.35 38.00 41.22Q36.60 45.09 36.60 49.77L36.60 49.77Q36.60 55.26 38.18 59.31Q39.75 63.36 42.54 66.06Q45.33 68.76 49.11 70.07Q52.89 71.37 57.30 71.37L57.30 71.37Q59.73 71.37 62.16 70.92Q64.59 70.47 66.84 69.30L66.84 69.30Q68.73 68.40 70.58 68.67Q72.42 68.94 73.68 70.56L73.68 70.56Q75.48 72.81 74.99 75.20Q74.49 77.58 72.24 78.66L72.24 78.66Q69.90 79.83 67.43 80.60Q64.95 81.36 62.43 81.77Q59.91 82.17 57.30 82.17L57.30 82.17Q50.82 82.17 45.02 80.10Q39.21 78.03 34.67 73.98Q30.12 69.93 27.51 63.86Q24.90 57.78 24.90 49.77L24.90 49.77Q24.90 42.84 27.29 36.99Q29.67 31.14 34.04 26.87Q38.40 22.59 44.34 20.21Q50.28 17.82 57.30 17.82L57.30 17.82Q61.26 17.82 65.04 18.72Q68.82 19.62 72.15 21.33Z%22></path></svg>" />
+<meta charset="UTF-8">
+<meta http-equiv=“Pragma” content=”no-cache”>
+<meta http-equiv=“Expires” content=”-1″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="../static/styletck.css">
+
+<title>Adventure Game</title>
+</head>
+
+<body>
+    <div class="tck">
+        <div id="tck-story">
+            
+            <h1>The Village at Dusk</h1>
+
+            <aside class="stats-panel">
+                <h3>{{ world.name }}'s Status</h3>
+
+                <ul class="stat-list">
+                    <li>
+                        <span class="stat-name">Location:</span>
+                        <span class="stat-value">{{ world.location }}</span>
+                    </li>
+
+                    <li>
+                        <span class="stat-name">Morality:</span>
+                        <span class="stat-value">{{ world.morality }}</span>
+                    </li>
+
+                    <li>
+                        <span class="stat-name">Character's Relationships:</span>
+                        <li>
+                        {% for npc in world.npc_trust %}
+                            <span class="stat-name">{{ npc }}: {{ world.npc_trust[npc] }}</span>
+                        {% endfor %}
+                        </li>
+                    </li>
+
+                    <li>
+                        <span class="stat-name">Curse Progression:</span>
+                        <span class="stat-value">{{ world.curse_stage }}</span>
+                    </li>
+                </ul>
+            </aside>
+
+
+
+
+            <section class="story-text">
+                {% if world.last_choice == "stay" %}
+                    <p>
+                        Having chosen to linger in Greybrook since the night is already settling slowly, lanterns lit one by one as people return to what remains of their routines, you try and keep to yourself, offering help when it is accepted, listening more than speaking.
+                    </p>
+                    <p>
+                        Some villagers turn away when they see you.
+                        Others hesitate… then allow you to carry water, hold a door, sit nearby in silence.
+                    </p>
+                    <p>
+                        You hear fragments of stories.
+                        Names spoken carefully. Places no one visits anymore.
+                        They speak of the town's inn, The Sweet Spot, a small but cheap place where you can sleep and catch on your rest after everything that has happened and you've witnessed here today.
+                    </p>
+                    <p>
+                        You make note of its name and its location, letting hunger and exhaustion guide you and work as your clocks as they catch up with you. Demanding to find some respite and nourishment.
+                        When you get there, the inn is quiet, its common room half-empty, the fire kept low casting small shadows as the fire dances with itself... You find that this place has a distinct smell of lavender and fresh baked bread, while also possessing a very intimate atmosphere, making it easy for one to feel at ease here.
+                    </p>
+                    <p>
+                        With all these shadows and soft glowing lights around you, as well as the cheap meal you are able to order, you let your guard down and settle neatly into your seat. Your jacket draped on the chair you sit at and your sleeves rolled as you enjoy the warmth of the fire and of the delicious broth and breath you are eating. 
+                    </p>
+                    <p>
+                        That said, you fail to notice Mira has also entered the inn, having a room there too and having noticed all your actions so far. How you spoke to the people... how you leave your coin on the counter without asking for change...
+                    </p>
+                    <p>
+                        By the time you lay down to sleep, the village feels a little less like stone.
+                    </p>
+
+                {% elif world.last_choice == "leave" %}
+                    <p>
+                        You choose to leave Greybrook under cover of darkness, the road slick beneath your boots.
+                        A stranger to the clouds gathering quickly overhead and to how the air above starts to become heavy with the promise of rain.
+                    </p>
+                    <p>
+                        You are deep in the path and in your thoughts when you feel it, soft and gentle.
+                        It begins to drizzle. Drops are falling down randomly at first, before the sky opens.
+                        You spot shelter just in time — the remains of a house half-collapsed, its roof still intact enough to keep the worst of the rain out.
+                    </p>
+                    <p>
+                        Inside, shapes emerge as your eyes adjust.
+                        A family, frozen mid-meal.
+                        A child reaching for something that will never arrive.
+                    </p>
+                    <p>
+                        Outside, in the yard, animals stand locked in panic — a horse reared halfway, birds turned to stone where they once perched.
+                    </p>
+                    <p>
+                        The curse is not selective.
+                        It is not merciful.
+                        Your stomach twists as you can barely keep eye contact with it all, avoiding looking to the expressions forever etched into their face.
+                        Your heart aching for everyone whose life was cut short with such a painful and unforgiving fate, thoughts racing with helplessness and sorrow for their pain echoed by the sound of the rain.
+                    </p>
+                    <p>
+                        The rain pounds on the broken roof as you then crouch down among the statues, your knees to your chest and head buried in them as you hold yourself and calm the feelings itching within you. You pause and focus solely on the rhythmic sound of the rain, letting your mind quiet down and think of Mira.
+                        Of the square.
+                        Of how quickly life becomes still.
+                    </p>
+                    <p>
+                        When the storm finally eases, dawn has arrived and you leave knowing more than you did before —
+                        and wishing you didn't.
+                    </p>
+
+                {% elif world.last_choice == "shrine" %}
+                    <p>
+                        You decide to take the path to the Shrine. It is treacherous as it is narrow and overgrown, winding up the hill beyond the village. A small detour from the main road to the Capital.
+                        The air changes as you climb — lighter, humming faintly, as if the world itself is holding its breath.
+                    </p>
+                    <p>
+                        The shrine itself is older than Greybrook.
+                        That much you can tell by how the stone is worn smooth by time, possessing symbols half-erased but still pulsing with quiet intent of prayers and beliefs. The runes still humming faintly beneath your fingers when you brush against them in passing.
+                    </p>
+                    <p>
+                        As you step closer to its entrance, to the big wooden doors that await you, something stirs. Something inside you... inside your heart... soft and almost imperceptible.
+                        Not fear — recognition.  
+                    </p>
+                    <p>
+                        Ever since you were little, you were fascinated with all things magic.
+                        They called to you.
+                        Your mother used to call you her 'little fairy'.
+                    </p>
+                    <p>
+                        You don't know why you're thinking of such memories now, not why you feel like the Shrine is responding. 
+                        Not woth words, with warmth... and with a quiet pull that settles deep in your bones as a small light flits into view — visible on the inside of the Shrine and shimmering like dew in moonlight. 
+                        The fire enticing you forward and to step foot inside the sacred grounds.
+                    </p>
+                    <p>
+                        <em>“So it's begun again,”</em> a calm voice says from behind you.
+                    </p>
+                    <p>
+                        You turn to see a woman wrapped in layered cloth standing at the edge of the shrine's light, her presence steady, deliberate.
+                        Her eyes linger on the markings, then on you. 
+                    </p>
+                    <p>
+                        <em>“Elowen,”</em> she introduces herself. <em>"I'm the keeper of these grounds"</em>
+                    </p>
+                    <p>
+                        <em>"I'm {{ world.name }}... I am... sorry for your town... your people,"</em> you speak up quietly, matching her tone and offering a small glimpse of kindness and comfort... Unsure of what else to even say...
+                    </p>
+                    <p>
+                        She looks past you, toward Greybrook, as it stands below. In it's broken and grief stricken state.
+                        <em>“You should listen carefully,”</em> she adds, <em>"If the shrine answered you, then the curse is not just spreading — it's searching.”</em>
+                    </p>
+                    <p>
+                        She meets your gaze without flinching.
+                        <em>“Magic always knows who listens.”</em> She smiles softly, her eyes with a mix of sadness and of comfort.
+                    </p>
+                {% endif %}
+
+            </section>
+
+
+            <form method="post">
+                <button class="btn" name="choice" value="elaria">
+                    Travel to the capital of Elaria
+                </button>
+                <button class="btn" name="choice" value="investigate">
+                    Seek those who study the curse
+                </button>
+            </form>
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+<!--footer>
+    <p class="copyright-text">© Copyright 2024 Diana Teixeira </p>
+</footer-->
+
+<!-- Our codes -->
+<!--script src="js/main.js"></script-->

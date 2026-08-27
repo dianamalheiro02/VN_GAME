@@ -1,0 +1,57 @@
+id: shrine_elowen
+template: story/shrine_elowen.html
+
+text_blocks:
+  - "You choose the path to the Shrine. It is narrow and treacherous, half-swallowed by roots and wildgrowth, winding its way up the hill beyond the village—a quiet detour from the road that leads to the Capital."
+  - "As you climb, the air begins to change. It grows lighter, thinner—charged. There's a faint hum beneath it all, like a distant note stretched across the world. It makes the silence feel deliberate, as though something unseen is waiting… listening."
+  - "The Shrine stands older than Greybrook itself. Time has worn its stone smooth, its carved symbols softened into ghosts of meaning. And yet, they remain. Half-erased, but not forgotten—still holding the quiet weight of prayers, of belief." 
+  - "When your fingers brush against them, you feel it: a faint vibration, like an echo that never quite faded."
+  - "You step closer. Toward the great wooden doors. Toward something you cannot name."
+  - "And something stirs."
+  - "Not around you… but within you."
+  - "A quiet shift. A subtle pull. Something soft and ancient, brushing against the edges of your heart."
+  - "Not fear."
+  - "Recognition."
+  - "Ever since you were little, you've been drawn to magic. Not just stories or tricks—but something deeper. As if it wasn't something you learned… but something you remembered."
+  - "Your mother used to laugh and call you her 'little fairy.' You were always asking questions, always searching—never satisfied with what was, always reaching for what could be."
+  - "You don't know why those memories surface now. Or why, standing here, they feel… important."
+  - "The Shrine feels aware of you."
+  - "Not in words. Not in sound."
+  - "But in warmth. In a quiet, steady pull that settles deep into your bones, as if something within it is reaching back."
+  - "'So… it's begun again,' a calm voice says from behind you."
+
+choices:
+  listen:
+    text: "Turn toward the voice"
+    effects:
+      ethics.compassion: 2
+      attr.presence: 1
+      attr.intellect: 1
+      attr.resolve: 2
+      event: listened_elowen
+      instability: -1
+      knowledge: shrine_called_to_you
+    next_node: shrine_elowen2
+
+  question:
+    text: "'Who's there?', you demand"
+    effects:
+      ethics.curiosity: 2
+      attr.presence: 2
+      attr.intellect: 2 
+      attr.resolve: 1
+      event: questioned_elowen
+      instability: -2
+      knowledge: shrine_called
+    next_node: shrine_elowen2
+
+  leave:
+    text: "Step back… and leave"
+    effects:
+      ethics.authority: 2
+      attr.presence: -2 
+      attr.resolve: -1
+      attr.physique: 2 
+      event: fled_shrine
+      knowledge: shrine_scared
+    next_node: shrine_elowen3

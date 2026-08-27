@@ -1,0 +1,19 @@
+id: inn_greybrook
+template: story/inn_greybrook.html
+
+text_blocks:
+  - "Having chosen to linger in Greybrook since the night is already settling slowly, lanterns lit one by one as people return to what remains of their routines, you try and keep to yourself, offering help when it is accepted, listening more than speaking."
+  - "Some villagers turn away when they see you. Others hesitate… then allow you to carry water, hold a door, sit nearby in silence."
+  - "You hear fragments of stories. Names spoken carefully. Places no one visits anymore."
+  - "They speak of the town's inn, The Sweet Spot, a small but cheap place where you can sleep and catch on your rest after everything that has happened and you've witnessed here today."
+  - "You make note of its name and its location, letting hunger and exhaustion guide you and work as your clocks as they catch up with you. Demanding to find some respite and nourishment."
+  - "When you get there, the inn is quiet, its common room half-empty, the fire kept low casting small shadows as the fire dances with itself... You find that this place has a distinct smell of lavender and fresh baked bread, while also possessing a very intimate atmosphere, making it easy for one to feel at ease here."
+  - "With all these shadows and soft glowing lights around you, as well as the cheap meal you are able to order, you let your guard down and settle neatly into your seat. Your jacket draped on the chair you sit at and your sleeves rolled as you enjoy the warmth of the fire and of the delicious broth and breath you are eating."
+  - "That said, you fail to notice Mira has also entered the inn, having a room there too and having noticed all your actions so far. How you spoke to the people... how you leave your coin on the counter without asking for change..."
+  - "By the time you lay down to sleep, the village feels a little less like stone."
+
+choices:
+  continue:
+    text: "Continue your journey"
+    effects: {}
+    next_node: act2_intro

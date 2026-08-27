@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block scene_bg %}
+<div class="scene-bg" style="background-image: url('{{ url_for('static', filename='1.png') }}');"></div>
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="story-card">
+
+        <h1>The Cursed Kingdom</h1>
+        <p class="subtitle">Elaria &mdash; Year of the Stone Plague</p>
+
+        {% for block in text_blocks %}
+            <p>{{ block }}</p>
+        {% endfor %}
+
+        <form method="post" style="margin-top: 32px;">
+            {% for key, choice in node.choices.items() %}
+                <button class="btn btn--primary" name="choice" value="{{ key }}">
+                    {{ choice.text }}
+                </button>
+            {% endfor %}
+        </form>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../static/1.png');
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+}
+
+.story-text {
+    background-color: rgba(253, 252, 252, 0.753); /* Semi-transparent background */
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+h1, h2 , h3 {
+    text-shadow: 7px 5px 8px #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.premise{
+    color: #fff;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #1c1c1c;
+    color: #eaeaea;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: #326c92;
+    transform: scale(1.1);
+}
+
+header {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #bbb;
+}
+
+
+.stats-panel {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 220px;
+    background: rgba(20, 20, 20, 0.85);
+    color: #eee;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+.stats-panel h3 {
+    margin-top: 0;
+    font-size: 1em;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 6px;
+}
+
+.stat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stat-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.stat-name {
+    flex: 1;
+}
+
+.stat-value {
+    margin-left: 6px;
+}
+
+.stat-delta {
+    margin-left: 6px;
+    font-weight: bold;
+}
+
+.stat-delta.up {
+    color: #7CFC98;
+}
+
+.stat-delta.down {
+    color: #FF7A7A;
+}

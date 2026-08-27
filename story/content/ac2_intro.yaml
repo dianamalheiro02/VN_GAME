@@ -1,0 +1,11 @@
+id: ac2_intro
+template: story/capital.html
+
+text_blocks:
+  - ""
+
+choices:
+  continue:
+    text: "Continue your journey"
+    effects: {}
+    next_node: act2_intro
